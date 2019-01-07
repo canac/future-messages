@@ -25,10 +25,20 @@ app.get(`/`, (req: express.Request, res: express.Response) => {
   res.sendFile(path.join(wwwDir, `index.html`));
 });
 
+
 import { IMessageModel, Message } from './schemas/message';
+
 app.get(`/api/messages`, async (req: express.Request, res: express.Response) => {
   const messages: IMessageModel[] = await Message.find();
   res.send(messages);
+});
+
+app.post(`/api/messages`, async (req: express.Request, res: express.Response) => {
+  const message: IMessageModel = await Message.create({
+    content: req.body.content,
+    notifyTime: new Date(req.body.notifyTime),
+  });
+  res.send(message);
 });
 
 app.listen(process.env.PORT);

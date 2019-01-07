@@ -16,11 +16,13 @@
     "@types/express": "^4.16.0",
     "@types/mongoose": "^5.3.7",
     "@types/node": "^10.12.18",
+    "eslint": "^5.12.0",
     "typescript": "^3.2.2"
   },
   "scripts": {
     "build": "tsc",
     "build-watch": "tsc --watch",
+    "lint": "eslint www/**/*.js",
     "run": "tsc && node .",
     "start": "node ."
   },

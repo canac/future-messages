@@ -1,0 +1,16 @@
+{
+  "extends": "eslint:recommended",
+  "parserOptions": {
+    "ecmaVersion": 8
+  },
+  "env": {
+    "browser": true
+  },
+  "globals": {
+    "Vue": true
+  },
+  "rules": {
+    "comma-dangle": ["error", "always-multiline"],
+    "quotes": ["error", "backtick"]
+  }
+}

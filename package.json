@@ -1,0 +1,27 @@
+{
+  "name": "future-messages",
+  "version": "1.0.0",
+  "description": "Future messages",
+  "main": "dist/app.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^10.12.18",
+    "typescript": "^3.2.2"
+  },
+  "scripts": {
+    "build": "tsc",
+    "build-watch": "tsc --watch",
+    "run": "tsc && node .",
+    "start": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/canac/future-messages.git"
+  },
+  "author": "Caleb Cox",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/canac/future-messages/issues"
+  },
+  "homepage": "https://github.com/canac/future-messages#readme"
+}

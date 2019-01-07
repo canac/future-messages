@@ -8,7 +8,11 @@
   <body>
     <div id="app">
       <h1>Messages</h1>
-      <p>{{ messages.length }}</p>
+      <ul>
+        <li v-for="message in messages">
+          {{ message.content }} ({{ message.notifyTime.toString() }})
+        </li>
+      </ul>
     </div>
   </body>
 </html>

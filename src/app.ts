@@ -9,7 +9,7 @@ import * as mongoose from 'mongoose';
 const username: string = process.env.DB_USERNAME || ``;
 const password: string = process.env.DB_PASSWORD || ``;
 const auth = (username.length > 0 && password.length > 0) ? `${encodeURIComponent(username)}:${encodeURIComponent(password)}` : ``;
-mongoose.connect(`mongodb://${auth}@${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_DATABASE}`);
+mongoose.connect(`mongodb://${auth}@${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_DATABASE}`, { useNewUrlParser: true });
 
 import * as express from 'express';
 import * as expressAsyncAwait from 'express-async-await';

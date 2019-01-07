@@ -20,11 +20,11 @@ const app: express.Application = expressAsyncAwait(express());
 app.use(bodyParser.json());
 
 const wwwDir: string = path.join(__dirname, `..`, `www`);
+app.use(`/static`, express.static(wwwDir));
 
 app.get(`/`, (req: express.Request, res: express.Response) => {
   res.sendFile(path.join(wwwDir, `index.html`));
 });
-
 
 import { IMessageModel, Message } from './schemas/message';
 

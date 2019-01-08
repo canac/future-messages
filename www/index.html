@@ -11,12 +11,19 @@
   </head>
   <body>
     <div id="app">
-      <h1>Messages</h1>
-      <ul>
-        <li v-for="message in messages">
-          {{ message.content }} ({{ message.notifyTime.toString() }})
-        </li>
-      </ul>
+      <md-toolbar :md-elevation="3">
+        <span class="md-title">Messages</span>
+      </md-toolbar>
+
+      <md-list class="md-double-line">
+        <md-list-item v-for="message in messages">
+          <div class="md-list-item-text">
+            <span>{{ message.content }}</span>
+            <span>{{ message.notifyTime.toString() }}</span>
+          </div>
+        </md-list-item>
+      </md-list>
+
       <form class="create-message" v-on:submit.prevent="createMessage">
         <h1>Add message</h1>
         <label>

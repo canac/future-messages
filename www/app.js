@@ -33,6 +33,8 @@ async function createMessage (content) {
 }
 
 document.addEventListener(`DOMContentLoaded`, async () => {
+  Vue.use(VueMaterial.default);
+
   const app = new Vue({
     el: `#app`,
     data: {

@@ -24,13 +24,23 @@
         </md-list-item>
       </md-list>
 
-      <form class="create-message" v-on:submit.prevent="createMessage">
-        <h1>Add message</h1>
-        <label>
-          <p>Message content</p>
-          <input type="text" id="new-message-content" v-model="newMessageContent" />
-          <button type="submit">Create</button>
-        </label>
+      <form novalidate class="md-layout" v-on:submit.prevent="createMessage">
+        <md-card class="md-layout-item md-size-50 md-small-size-100">
+          <md-card-header>
+            <div class="md-title">Add Message</div>
+          </md-card-header>
+
+          <md-card-content>
+            <md-field>
+              <label for="new-message-content">Message content</label>
+              <md-input type="text" id="new-message-content" v-model="newMessageContent" />
+            </md-field>
+          </md-card-content>
+
+          <md-card-actions>
+            <md-button type="submit" class="md-primary">Create</md-button>
+          </md-card-actions>
+        </md-card>
       </form>
     </div>
   </body>
